@@ -1,35 +1,189 @@
+
 <!doctype html>
 <html lang="bn">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <meta name="description" content="জুলাইয়ে আলো — সত্য, নিরপেক্ষ ও সময়োপযোগী সংবাদ।">
   <meta name="theme-color" content="#b5121b">
+
   <title>জুলাইয়ে আলো | সত্যের পাশে, মানুষের কথা</title>
+
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
-  <div class="topline"><div class="wrap top-inner"><span id="today">আজকের সংবাদ</span><span>সত্যের পাশে, মানুষের কথা</span></div></div>
+
+  <div class="topline">
+    <div class="wrap top-inner">
+      <span id="today">আজকের সংবাদ</span>
+      <span>সত্যের পাশে, মানুষের কথা</span>
+    </div>
+  </div>
+
   <header class="masthead wrap">
-    <a class="brand" href="/" aria-label="জুলাইয়ে আলো হোম"><span class="brand-mark">জআ</span><span><strong>জুলাইয়ে আলো</strong><small>সত্যের পাশে, মানুষের কথা</small></span></a>
-    <div class="header-note">সর্বশেষ সংবাদ • নির্ভরযোগ্য তথ্য • জনস্বার্থ</div>
+    <a class="brand" href="./" aria-label="জুলাইয়ে আলো হোম">
+      <span class="brand-mark">জআ</span>
+      <span>
+        <strong>জুলাইয়ে আলো</strong>
+        <small>সত্যের পাশে, মানুষের কথা</small>
+      </span>
+    </a>
+
+    <div class="header-note">
+      সর্বশেষ সংবাদ • নির্ভরযোগ্য তথ্য • জনস্বার্থ
+    </div>
   </header>
-  <nav class="nav"><div class="wrap nav-inner"><button class="menu-toggle" id="menuToggle" aria-label="মেনু খুলুন">☰</button><div class="nav-links" id="navLinks"><a class="active" href="#home">প্রচ্ছদ</a><a href="#latest" data-category="জাতীয়">জাতীয়</a><a href="#latest" data-category="রাজনীতি">রাজনীতি</a><a href="#latest" data-category="সারাদেশ">সারাদেশ</a><a href="#latest" data-category="চট্টগ্রাম">চট্টগ্রাম</a><a href="#latest" data-category="সাতকানিয়া">সাতকানিয়া</a><a href="#latest" data-category="আন্তর্জাতিক">আন্তর্জাতিক</a><a href="#latest" data-category="খেলাধুলা">খেলাধুলা</a><a href="#latest" data-category="বিনোদন">বিনোদন</a></div><form class="search" id="searchForm"><input id="searchInput" type="search" placeholder="খবর খুঁজুন..." aria-label="খবর খুঁজুন"><button aria-label="সার্চ">⌕</button></form></div></nav>
+
+  <nav class="nav">
+    <div class="wrap nav-inner">
+
+      <button class="menu-toggle" id="menuToggle" aria-label="মেনু খুলুন">
+        ☰
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a class="active" href="#home">প্রচ্ছদ</a>
+        <a href="#latest" data-category="জাতীয়">জাতীয়</a>
+        <a href="#latest" data-category="রাজনীতি">রাজনীতি</a>
+        <a href="#latest" data-category="সারাদেশ">সারাদেশ</a>
+        <a href="#latest" data-category="চট্টগ্রাম">চট্টগ্রাম</a>
+        <a href="#latest" data-category="সাতকানিয়া">সাতকানিয়া</a>
+        <a href="#latest" data-category="আন্তর্জাতিক">আন্তর্জাতিক</a>
+        <a href="#latest" data-category="খেলাধুলা">খেলাধুলা</a>
+        <a href="#latest" data-category="বিনোদন">বিনোদন</a>
+      </div>
+
+      <form class="search" id="searchForm">
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="খবর খুঁজুন..."
+          aria-label="খবর খুঁজুন"
+        >
+        <button aria-label="সার্চ">⌕</button>
+      </form>
+
+    </div>
+  </nav>
+
   <main class="wrap" id="home">
-    <div class="breaking"><span class="breaking-label">ব্রেকিং</span><div class="ticker"><span>জুলাইয়ে আলোতে আপনাকে স্বাগতম — গুরুত্বপূর্ণ ও যাচাইকৃত সংবাদ পড়ুন</span></div></div>
-    <section class="hero-grid" aria-label="প্রধান সংবাদ"><div id="leadStory" class="lead-story"></div><div class="side-leads" id="sideLeads"></div></section>
-    <section class="ad-slot" aria-label="বিজ্ঞাপন স্থান"><span>বিজ্ঞাপনের জন্য জায়গা</span></section>
-    <section class="section" id="latest"><div class="section-heading"><h2 id="sectionTitle">সর্বশেষ সংবাদ</h2><a href="#latest" id="showAll">সব সংবাদ <span>←</span></a></div><div class="content-grid"><div class="news-grid" id="newsGrid"></div><aside class="sidebar"><div class="side-box"><h3>জনপ্রিয় বিভাগ</h3><div class="category-list" id="categoryList"></div></div><div class="side-box"><h3>সম্পাদকীয় নোট</h3><p>সংবাদ প্রকাশের আগে তথ্য, তারিখ, স্থান ও সংশ্লিষ্ট পক্ষের বক্তব্য যাচাই করুন। ভুল তথ্য পেলে আমাদের জানান।</p></div></aside></div></section>
-    <section class="section"><div class="section-heading"><h2>আমাদের সম্পর্কে</h2></div><p class="about-text">জুলাইয়ের আলো একটি বাংলা নিউজ পোর্টাল। জনস্বার্থসংশ্লিষ্ট সংবাদ, স্থানীয় খবর ও গুরুত্বপূর্ণ ঘটনার নির্ভরযোগ্য তথ্য পাঠকের কাছে পৌঁছে দেওয়াই আমাদের লক্ষ্য।</p></section>
+
+    <div class="breaking">
+      <span class="breaking-label">ব্রেকিং</span>
+      <div class="ticker">
+        <span>জুলাইয়ে আলোতে আপনাকে স্বাগতম — গুরুত্বপূর্ণ ও যাচাইকৃত সংবাদ পড়ুন</span>
+      </div>
+    </div>
+
+    <section class="hero-grid" aria-label="প্রধান সংবাদ">
+      <div id="leadStory" class="lead-story"></div>
+      <div class="side-leads" id="sideLeads"></div>
+    </section>
+
+    <section class="ad-slot" aria-label="বিজ্ঞাপন স্থান">
+      <span>বিজ্ঞাপনের জন্য জায়গা</span>
+    </section>
+
+    <section class="section" id="latest">
+
+      <div class="section-heading">
+        <h2 id="sectionTitle">সর্বশেষ সংবাদ</h2>
+        <a href="#latest" id="showAll">
+          সব সংবাদ <span>←</span>
+        </a>
+      </div>
+
+      <div class="content-grid">
+
+        <div class="news-grid" id="newsGrid"></div>
+
+        <aside class="sidebar">
+
+          <div class="side-box">
+            <h3>জনপ্রিয় বিভাগ</h3>
+            <div class="category-list" id="categoryList"></div>
+          </div>
+
+          <div class="side-box">
+            <h3>সম্পাদকীয় নোট</h3>
+            <p>
+              সংবাদ প্রকাশের আগে তথ্য, তারিখ, স্থান ও সংশ্লিষ্ট পক্ষের
+              বক্তব্য যাচাই করুন। ভুল তথ্য পেলে আমাদের জানান।
+            </p>
+          </div>
+
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <h2>আমাদের সম্পর্কে</h2>
+      </div>
+
+      <p class="about-text">
+        জুলাইয়ের আলো একটি বাংলা নিউজ পোর্টাল। জনস্বার্থসংশ্লিষ্ট সংবাদ,
+        স্থানীয় খবর ও গুরুত্বপূর্ণ ঘটনার নির্ভরযোগ্য তথ্য পাঠকের কাছে
+        পৌঁছে দেওয়াই আমাদের লক্ষ্য।
+      </p>
+    </section>
+
   </main>
-  <footer><div class="wrap footer-inner"><div><a class="footer-brand" href="/">জুলাইয়ে আলো</a><p>সত্যের পাশে, মানুষের কথা</p></div><div class="footer-links"><a href="#home">প্রচ্ছদ</a><a href="#latest">সর্বশেষ</a><a href="mailto:news@example.com">যোগাযোগ</a></div><small>© <span id="year"></span> জুলাইয়ে আলো। সর্বস্বত্ব সংরক্ষিত।</small></div></footer>
+
+  <footer>
+    <div class="wrap footer-inner">
+
+      <div>
+        <a class="footer-brand" href="./">জুলাইয়ে আলো</a>
+        <p>সত্যের পাশে, মানুষের কথা</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#home">প্রচ্ছদ</a>
+        <a href="#latest">সর্বশেষ</a>
+        <a href="mailto:news@example.com">যোগাযোগ</a>
+      </div>
+
+      <small>
+        © <span id="year"></span> জুলাইয়ে আলো। সর্বস্বত্ব সংরক্ষিত।
+      </small>
+
+    </div>
+  </footer>
+
   <div class="article-modal" id="articleModal" hidden>
+
     <div class="article-backdrop" data-close-modal></div>
-    <section class="article-dialog" role="dialog" aria-modal="true" aria-label="সংবাদের বিস্তারিত">
-      <button class="article-close" type="button" data-close-modal aria-label="বন্ধ করুন">×</button>
+
+    <section
+      class="article-dialog"
+      role="dialog"
+      aria-modal="true"
+      aria-label="সংবাদের বিস্তারিত"
+    >
+
+      <button
+        class="article-close"
+        type="button"
+        data-close-modal
+        aria-label="বন্ধ করুন"
+      >
+        ×
+      </button>
+
       <div id="articleContent"></div>
+
     </section>
   </div>
+
+  <!-- Supabase library: এটি app.js-এর আগে থাকবে -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- Website JavaScript -->
   <script src="./app.js"></script>
-</body></html><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="/app.js"></script>
+
+</body>
+</html>
